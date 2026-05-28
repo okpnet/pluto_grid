@@ -2,6 +2,8 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
+part 'row_state_ext.dart';
+
 abstract class IRowState {
   List<PlutoRow> get rows;
 

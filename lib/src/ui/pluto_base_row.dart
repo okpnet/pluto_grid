@@ -41,8 +41,12 @@ class PlutoBaseRow extends StatelessWidget {
     return true;
   }
 
+  ///change
+  // bool _handleOnWillAccept(DragTargetDetails<PlutoRow> details) {
+  //   return !_checkSameDragRows(details.data);
+  // }
   bool _handleOnWillAccept(DragTargetDetails<PlutoRow> details) {
-    return !_checkSameDragRows(details.data);
+    return !details.data.enableDrop ? false : !_checkSameDragRows(details.data);
   }
 
   void _handleOnAccept(DragTargetDetails<PlutoRow> details) async {

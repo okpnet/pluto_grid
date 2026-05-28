@@ -10,11 +10,12 @@ class PlutoRow {
     this.sortIdx = 0,
     bool checked = false,
     Key? key,
+    this.enableDrop = true, //Add
+    this.enableDrag = true, //Add
   })  : type = type ?? PlutoRowTypeNormal.instance,
         _checked = checked,
         _state = PlutoRowState.none,
-        _key = key ?? UniqueKey(),
-        _enableDrag = true; //Add
+        _key = key ?? UniqueKey();
 
   final PlutoRowType type;
 
@@ -32,9 +33,9 @@ class PlutoRow {
 
   PlutoRowState _state;
 
-  bool _enableDrag;
+  bool enableDrag;
 
-  bool get enableDrag => _enableDrag;
+  bool enableDrop;
 
   Key get key => _key;
 

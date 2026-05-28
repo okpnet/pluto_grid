@@ -94,7 +94,7 @@ class _PlutoDefaultCellState extends PlutoStateWithChange<PlutoDefaultCell> {
       _hasFocus,
       stateManager.hasFocus,
     );
-    stateManager.appendRows(rows)
+
     _canRowDrag = update<bool>(
       _canRowDrag && widget.row.enableDrag, //"enable drag" added plut_row
       widget.column.enableRowDrag && stateManager.canRowDrag,
