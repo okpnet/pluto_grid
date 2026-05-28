@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 class PlutoRow {
+  ///Add list
+  ///_enableDrag=true
   PlutoRow({
     required this.cells,
     PlutoRowType? type,
@@ -11,7 +13,8 @@ class PlutoRow {
   })  : type = type ?? PlutoRowTypeNormal.instance,
         _checked = checked,
         _state = PlutoRowState.none,
-        _key = key ?? UniqueKey();
+        _key = key ?? UniqueKey(),
+        _enableDrag = true; //Add
 
   final PlutoRowType type;
 
@@ -28,6 +31,10 @@ class PlutoRow {
   PlutoRow? _parent;
 
   PlutoRowState _state;
+
+  bool _enableDrag;
+
+  bool get enableDrag => _enableDrag;
 
   Key get key => _key;
 
